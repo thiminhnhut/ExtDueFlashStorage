@@ -5,3 +5,4 @@
 .gcc-flags.json
 test/
 include/
+.vscode

@@ -7,17 +7,26 @@
 class ExtDueFlashStorage: public DueFlashStorage {
 private:
     uint32_t _address_count;
+    uint32_t _address_over_data;
     uint32_t _address_index_current;
 
     unsigned char _lenghtPerData;
     unsigned char _maxStorage;
 
-    unsigned char _address_start_data;
+    uint32_t _address_start_data;
+
+    uint32_t _max_address_data;
 
     int _index_current;
     int _count;
+    int _over_data;
 
     bool _flashInit = false;
+
+    enum OverData {
+        No_Over,
+        Over_Times_1
+    };
 
 public:
 
@@ -29,6 +38,7 @@ public:
         Write_Count_Error,
         Write_Index_Error,
         Write_Size_Error,
+        Write_Over_Data_Error,
         Init_Error
     };
 
