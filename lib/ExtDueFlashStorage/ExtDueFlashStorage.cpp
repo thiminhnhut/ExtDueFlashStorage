@@ -13,7 +13,6 @@ ExtDueFlashStorage::ExtDueFlashStorage(uint32_t address, unsigned char lengthPer
 
 void ExtDueFlashStorage::init() {
     if (!_flashInit) {
-        delay(5000);
         _FLASH_DEBUG("(Init) Start!\n");
         _flashInit = true;
 
@@ -60,9 +59,9 @@ ExtDueFlashStorage::ErrorFlash ExtDueFlashStorage::writeString(String data) {
 
                 for (unsigned char i = 0; i < _maxStorage/2; i++) {
                     unsigned int address_data = _address_start_data + i*_lenghtPerData;
-                    _size = _data_tmp[i].length();
-                    write(address_data, _size);
-                    for (unsigned int j = 0; j < _size; j++) {
+                    unsigned char _size_tmp = _data_tmp[i].length();
+                    write(address_data, _size_tmp);
+                    for (unsigned int j = 0; j < _size_tmp; j++) {
                         write(address_data + 1 + j, _data_tmp[i][j]);
                     }
                 }
