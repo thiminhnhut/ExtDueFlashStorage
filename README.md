@@ -44,6 +44,6 @@
 
 ## Source code
 
-* [ExtDueFlashStorage](https://github.com/thiminhnhut/ExtDueFlashStorage/tree/master/lib/)
+* [ExtDueFlashStorage](https://github.com/thiminhnhut/ExtDueFlashStorage/tree/master/lib/ExtDueFlashStorage)
 
 * [Examples](https://github.com/thiminhnhut/ExtDueFlashStorage/blob/master/src/main.cpp)
