@@ -12,7 +12,7 @@ void setup() {
   SerialMonitor.begin(115200);
   extDueFlashStorage.init();
 
-  for (unsigned int i = 0; i < __MAX_FLASH_STORAGE__ + 50; i++) {
+  for (unsigned int i = 0; i < __MAX_FLASH_STORAGE__ + 20; i++) {
     extDueFlashStorage.writeString("Write Data " + String(i));
   }
 
@@ -26,6 +26,8 @@ void setup() {
   }
 
   SerialMonitor.println("Finish!");
+
+  extDueFlashStorage.reset();
 }
 
 void loop() {

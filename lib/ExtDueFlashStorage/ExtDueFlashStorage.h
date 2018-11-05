@@ -50,6 +50,7 @@ public:
     void readString(String arrays[]);
 
     unsigned char getCountWriteData();
-    uint32_t getIndexCurrent();
+
+    void reset();
 };
 #endif

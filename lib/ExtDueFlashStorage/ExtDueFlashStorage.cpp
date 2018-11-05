@@ -68,8 +68,8 @@ ExtDueFlashStorage::ErrorFlash ExtDueFlashStorage::writeString(String data) {
                 }
 
                 _over_data = No_Over;
-                _index_current = _maxStorage/2 - 1;
-                _count = _maxStorage/2 - 1;
+                _index_current = _maxStorage/2;
+                _count = _maxStorage/2;
             }
 
             unsigned int address_data = _address_start_data + _index_current*_lenghtPerData;
@@ -134,6 +134,12 @@ unsigned char ExtDueFlashStorage::getCountWriteData() {
     return _count;
 }
 
-uint32_t ExtDueFlashStorage::getIndexCurrent() {
-    return _index_current;
+void ExtDueFlashStorage::reset() {
+    _count = 0;
+    _index_current = 0;
+    _over_data = No_Over;
+
+    write(_address_count, _count);
+    write(_address_index_current, _address_count);
+    write(_address_over_data, _over_data);
 }
