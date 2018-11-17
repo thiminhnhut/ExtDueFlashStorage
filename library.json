@@ -1,0 +1,24 @@
+{
+    "name": "ExtDueFlashStorage",
+    "keywords": "ExtDueFlashStorage",
+    "description": "ExtDueFlashStorage Library for Arduino Due from DueFlashStorage Library",
+    "authors": {
+        "name": "thiminhnhut",
+        "email": "thiminhnhut@gmail.com",
+        "url": "https://github.com/thiminhnhut",
+        "maintainer": true
+    },
+    "version": "1.0.0",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/thiminhnhut/ExtDueFlashStorage.git"
+    },
+    "export": {
+        "include": "ExtDueFlashStorage"
+    },
+    "dependencies": {
+        "DueFlashStorage": "sebnil/DueFlashStorage"
+    },
+    "frameworks": "arduino",
+    "platforms": "atmelsam"
+}

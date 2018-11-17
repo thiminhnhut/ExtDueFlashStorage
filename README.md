@@ -44,6 +44,31 @@
 
 ## Source code
 
-* [ExtDueFlashStorage](https://github.com/thiminhnhut/ExtDueFlashStorage/tree/master/lib/ExtDueFlashStorage)
+* [ExtDueFlashStorage](https://github.com/thiminhnhut/ExtDueFlashStorage/tree/master/src/ExtDueFlashStorage)
 
-* [Examples](https://github.com/thiminhnhut/ExtDueFlashStorage/blob/master/src/main.cpp)
+  * File [ExtDueFlashStorage.h](https://github.com/thiminhnhut/ExtDueFlashStorage/tree/master/src/ExtDueFlashStorage.h)
+
+      enum ErrorFlash {
+            No_Error,
+            Over_Error,
+            Write_Error,
+            Write_Data_Error,
+            Write_Count_Error,
+            Write_Index_Error,
+            Write_Size_Error,
+            Write_Over_Data_Error,
+            Init_Error
+        };
+
+        ExtDueFlashStorage(uint32_t address, unsigned char lengthPerData, unsigned char maxStorage);
+
+        void init();
+
+        ExtDueFlashStorage::ErrorFlash writeString(String data);
+        void readString(String arrays[]);
+
+        unsigned char getCountWriteData();
+
+        void reset();
+
+* [Examples WriteStringtoFlash](https://github.com/thiminhnhut/ExtDueFlashStorage/blob/master/examples/WriteStringtoFlash/WriteStringtoFlash.ino)

@@ -1,0 +1,20 @@
+##############################################
+# Syntax Coloring Map For ExtDueFlashStorage
+##############################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+ExtDueFlashStorage	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+init	            KEYWORD2
+reset               KEYWORD2
+writeString         KEYWORD2
+readString          KEYWORD2
+getCountWriteData   KEYWORD2
+ErrorFlash	        KEYWORD2
