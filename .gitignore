@@ -7,3 +7,4 @@ test/
 include/
 .vscode
 *.ino.cpp
+platformio.ini
